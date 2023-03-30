@@ -1,0 +1,8 @@
+BasedOnStyle: LLVM
+IndentWidth: 2
+UseTab: Never
+PointerAlignment: Right
+BreakBeforeBraces: Attach
+SpacesBeforeTrailingComments: 2
+IndentCaseLabels: true
+AllowShortCaseLabelsOnASingleLine: true
