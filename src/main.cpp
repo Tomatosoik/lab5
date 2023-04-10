@@ -4,6 +4,7 @@
 
 
 int main(int argc, char **argv) {
-    std::cout << "Hello, world!" << std::endl;
-    return 0;
+    forward_spisok<int> sp(10);
+    sp.push_back(12);
+    std::cout << sp;
 }
