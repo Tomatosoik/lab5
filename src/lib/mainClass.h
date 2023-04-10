@@ -88,7 +88,7 @@ template <typename Type> forward_spisok<Type>::~forward_spisok() {
 template <typename Type> std::ostream& operator << (std::ostream& out, const forward_spisok<Type> & obj) {
   out << "\n  size = " << obj.size << "\n";
   size_t i = 0;
-  for(typename forward_spisok<Type>::Node tmp = obj.head; tmp != nullptr;) {
+  for(typename forward_spisok<Type>::Node* tmp = obj.head; tmp != nullptr;) {
     out << i++ << "\t" << tmp->inf << "\n";
     tmp = tmp->next;
   }
@@ -98,7 +98,7 @@ template <typename Type> std::ostream& operator << (std::ostream& out, const for
 template <typename Type> std::istream& operator >> (std::istream& in, forward_spisok<Type> & obj) {
   std::cout << "\n  size = " << obj.size << "\n";
   size_t i = 0;
-  for(typename forward_spisok<Type>::Node tmp = obj.head; tmp != nullptr;) {
+  for(typename forward_spisok<Type>::Node* tmp = obj.head; tmp != nullptr;) {
     std::cout << "  " << obj.size - i << "\t";
     in >> tmp->inf;
     tmp = tmp->next;
